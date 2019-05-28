@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="../static/css/register.css"/>
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/regsiter_check.js"></script>
+</head>
+<body>
+    <h1>佳 居 房 源 欢 迎 您</h1>
+    <div id="main">
+        <div id="left">
+        </div>
+        <div id="right">
+                <form id="frmRegister" action="/register/" method="post">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td class="right_txt">用户名：</td>
+                            <td>
+                                <input type="username" name="username" class="text" placeholder="请输入开头至少两位字母">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="user_err"></td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">电子邮箱：</td>
+                            <td>
+                                <input type="email" name="email" class="text" placeholder="请输入你的邮箱">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="email_err"></td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">输入密码：</td>
+                            <td>
+                                <input type="password" name="passwd" maxlength="20" placeholder="请输入6-10位字母、数字、下划线" class="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="passwd_err"></td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">确认密码：</td>
+                            <td>
+                                <input type="password" name="repasswd" maxlength="20" placeholder="请再次输入密码" class="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="cpasswd_err"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="" value="注册" class="button1">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="button" name="" value="已有？登录" class="button2"
+                                 onclick="location.href='/login'">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

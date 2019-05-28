@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易界面</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/old_house.css">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/index.js"></script>
+    <link rel="stylesheet" href="../static/css/entrust.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container">
+		        <!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a  class="navbar-brand" href="#">佳居房源</a>
+		        </div>
+
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right" id="daohang">
+		                <li><a href="/">首页</a></li>
+		                <li><a href="/old_house/">二手房</a></li>
+	                    <li><a href="/new_house/">新房</a></li>
+	                    <li><a href="/rent_house/">租房</a></li>
+		                <li><a href="/village/">小区</a></li>
+                        <li><a href="/person/">经纪人</a></li>
+		                <li><a href="/push/">发布房源</a></li>
+		            </ul>
+		        </div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>
+<!-- 中间 -->
+    <br><br><br><br>
+<div class="container">
+    <form id="frmRegister" action="/tradeForm/" method="post">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td class="right_txt">交易人</td>
+                            <td>
+                                <input type="name" name="name" class="text" value="{{ name }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">电话号码</td>
+                            <td>
+                                <input  name="phone" class="text" pattern="^[1][3,4,5,7,8][0-9]{9}$" required/>
+                            </td>
+                        </tr>
+                    <tr>
+                            <td class="right_txt">身份证号码</td>
+                            <td>
+                                <input  name="card" class="text" pattern="^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">房屋类型</td>
+                            <td>
+                                <input type="type" name="type" class="text" value="{{ house_type }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">房屋描述</td>
+                            <td>
+                                <input type="describe" name="describe" class="text" value="{{ content.describe }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">房源地点</td>
+                            <td>
+                                <input type="text" name="address" class="text" value="{{ content.addr }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">小区名</td>
+                            <td>
+                                <input type="village" name="village" class="text" value="{{ content.village }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">委托人</td>
+                            <td>
+                                <select  name="person">
+                                    {% for i in person %}
+                                      <option value="{{ i.name }}">{{ i.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right_txt">委托类型</td>
+                            <td>
+                                <select name="entrust">
+                                      <option value="交易申请">交易申请</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="" value="立即申请" class="button1"
+                                       onclick="javascript:alert('交易申请成功');">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <p>佳居房源</p>
+        <p>版权 201558234084 陈怡行 所有 </p>
+    </div>
+</footer>
+</body>
+</html>

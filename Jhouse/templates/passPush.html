@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善房源信息</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/old_house.css">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/index.js"></script>
+    <link rel="stylesheet" href="../static/css/entrust.css">
+    <script>
+        $(function () {
+            alert("您之前提交的申请已通过，请完成房屋相关信息填写。")
+        })
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container">
+		        <!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a  class="navbar-brand" href="#">佳居房源</a>
+		        </div>
+
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right" id="daohang">
+		                <li><a href="/">首页</a></li>
+		                <li><a href="/old_house/">二手房</a></li>
+	                    <li><a href="/new_house/">新房</a></li>
+	                    <li><a href="/rent_house/">租房</a></li>
+		                <li><a href="/village/">小区</a></li>
+                        <li><a href="/person/">经纪人</a></li>
+		                <li><a href="/push/">发布房源</a></li>
+		            </ul>
+		        </div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>
+<!-- 中间 -->
+    <br><br><br><br><br><br>
+<div class="container">
+    <form class="form-inline" action="/passForm/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputName2">房屋类型：</label>
+              <select name="title" id="">
+                  <option value="{{ type }}">{{ type }}</option>
+              </select>
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">图片：</label>
+            <input type="file" name="file">
+          </div>
+        <br><br>
+          <div class="form-group">
+            <label for="exampleInputName2">价钱：</label>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="单位：万" name="money">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">房屋描述：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="describe" value="{{ describe }}">
+          </div>
+        &nbsp;
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">地址：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="addr" value="{{ addr }}">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">小区名：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="village" value="{{ village }}">
+          </div>
+        &nbsp;
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">规格：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="standard" placeholder="两室一厅">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">面积：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="area" placeholder="99.99平米">
+          </div>
+        &nbsp;
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">朝向：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="direction" placeholder="东/南">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">有无电梯：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="elevator" placeholder="有/无">
+          </div>
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">楼层高低：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="floor_stand" placeholder="高/低">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">层数：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="floor" placeholder="10">
+          </div>
+        &nbsp;
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">建楼时间：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="bulid_time" placeholder="xxxx">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">优点1：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="point1" >
+          </div>
+        <br><br>
+        <div class="form-group">
+            <label for="exampleInputName2">优点2：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="point2">
+          </div>
+        &nbsp;
+        <div class="form-group">
+            <label for="exampleInputName2">优点3：</label>
+            <input type="text" class="form-control" id="exampleInputName2" name="point3">
+          </div>
+        <br><br>
+          <button type="submit" class="btn btn-default " onclick="javascript:alert('发布成功')"
+                  style="">立即发布</button>
+</form>
+</div>
+    <br>
+<footer id="footer">
+    <div class="container">
+        <p>佳居房源</p>
+        <p>版权 201558234084 陈怡行 所有 </p>
+    </div>
+</footer>
+</body>
+</html>

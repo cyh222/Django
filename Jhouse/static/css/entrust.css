@@ -1,0 +1,33 @@
+form{
+    padding-left: 300px;
+}
+table {
+    width: 800px;
+    font-size: 20px;
+}
+input{
+    border-radius: 5px;
+}
+select{
+    width: 100px;
+    border-radius: 10px;
+}
+.right_txt{
+    font-weight: bold;
+}
+tr{
+    height: 70px;
+}
+.text{
+    height: 40px;
+    width: 300px;
+    font-size: 15px;
+}
+.button1{
+    font-size: 20px;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #64A131;
+}

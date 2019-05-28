@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link href="../static/css/login.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+{#    <script src="../static/js/login_check.js"></script>#}
+</head>
+<body>
+    <h1>佳 居 房 源 欢 迎 您</h1>
+        <div id="main">
+            <div id="left">
+            </div>
+            <div id="right">
+                <div id="personal">
+                    <img src="../static/img/person.png" alt="" id="person"/>
+                </div>
+                <div id="login_form">
+                    <form id="frmLogin" action="/login/" method="post">
+                        {% csrf_token %}
+                        <table>
+                            <tr>
+                                <td class="right_txt">用户名：</td>
+                                <td>
+                                    <input type="username" name="uname" class="text" placeholder="请输入你的用户名">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="right_txt">密码：</td>
+                                <td>
+                                    <input type="password" name="upwd" maxlength="20" placeholder="请输入6-20位号码字符" class="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td id="log_err" style="color: red">
+                                    {{ errMsg}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" name="isSaved" id="remeber" checked="">
+                                    <label for="remeber">记住密码</label>
+                                    <a href="#" class="fast_login">忘记密码？快捷登录</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="submit" name="" value="登录" class="button1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="button" name="" value="没有？注册" class="button2"
+                                     onclick="location.href='/register'">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    </div>
+            </div>
+        </div>
+</body>
+</html>

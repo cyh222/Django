@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情界面</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/old_house.css">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/index.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container">
+		        <!-- Brand and toggle get grouped for better mobile display -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a  class="navbar-brand" href="#">佳居房源</a>
+		        </div>
+
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right" id="daohang">
+		                <li><a href="/">首页</a></li>
+		                <li><a href="/old_house/">二手房</a></li>
+	                    <li><a href="/new_house/">新房</a></li>
+	                    <li><a href="/rent_house/">租房</a></li>
+		                <li><a href="/village/">小区</a></li>
+                        <li><a href="/person/">经纪人</a></li>
+		                <li><a href="/push/">发布房源</a></li>
+		            </ul>
+		        </div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>
+<!-- 中间 -->
+    <br><br><br><br><br>
+    <div class="container" style="padding-left: 0px">
+<div class="showall">
+	                <!--left -->
+	                <div class="showbot">
+                    <div id="showbox">
+						<img src="/{{ content.picture }}"/>
+					</div>
+                        </div>
+                        <!--conet -->
+                        <div class="tb-property">
+                        	<div class="tr-nobdr">
+                        		<h3> {{ content.describe }}</h3>
+                        	</div>
+                        		<div class="txt">
+                        			<span class="nowprice">￥<a href="">{{ content.money }}万</a></span>
+                        			<div class="cumulative">
+                        				<span class="number ty1">地点<br /><em id="add_sell_num_363">{{ content.addr }}</em></span>
+                        				<span class="number tyu">户型<br /><em id="add_sell_num_363">{{ content.standard }}</em></span>
+                        			</div>
+                        		</div>
+                        	<div class="txt-h">
+                        		<span class="tex-o">优点</span>
+                        		<ul class="glist" id="glist" data-monitor="goodsdetails_fenlei_click">
+                        			<li><a title="" href="">{{ content.point1 }}</a></li>
+                        			<li><a title="" href="">{{ content.point2 }}</a></li>
+                                    <li><a title="" href="">{{ content.point3 }}</a></li>
+                        		</ul>
+                        	</div>
+                        	<div class="txt-h">
+                        		<span class="tex-o">基本信息</span>
+                        		<ul class="glist" id="glist" data-monitor="goodsdetails_fenlei_click">
+                        			<li><a title="" href="">{{ content.floor_stand }}楼层</a></li>
+                        			<li><a title="" href="">{{ content.floor }}层</a></li>
+                                    <li><a title="" href="">{{ content.bulid_time }}年建</a></li>
+                        		</ul>
+                        	</div>
+                        	<div class="nobdr-btns">
+                        		<button class="addcart hu" onclick="location.href='/entrust/?id={{ house_id }}&name={{ content.title }}'">预约看房</button>
+                        		<button class="addcart yh" onclick="location.href='/trade/?id={{ house_id }}&name={{ content.title }}'">立即购买</button>
+                        	</div>
+                        </div>
+                        <!--right -->
+                        <div class="extInfo">
+            	            <div class="brand-logo">
+            	             	<a href="" title="">
+            	             		<img src="/{{ content.picture }}" width="250" height="182"/>
+            	             	</a>
+            	            </div>
+            	            <div class="seller-pop-box" style="padding-top: 130px">
+            	            	<span class="tr">地点：{{ content.addr }}</span>
+            	            	<span class="tr">小区名：{{ content.village }}</span>
+            	            	<span class="tr">面积：{{ content.area }}</span>
+            	            </div>
+            	            <div class="seller-phone">
+            	            	<span class="pop im">
+            	            		<a href="" data-name="联系卖家">联系卖家</a>
+            	            	</span>
+            	            	<span class="pop in">
+            	            		<a href="" data-name="咨询卖家">咨询经纪人</a>
+            	            	</span>
+            	            	<span class="pop in">
+            	            		<a href="" data-name="进店逛逛">实地看房</a>
+            	            	</span>
+            	            	<span class="pop in">
+            	            		<a href="" data-name="关注店铺">我要购买</a>
+            	            	</span>
+            	            </div>
+                        </div>
+                    </div>
+    </div>
+
+<footer id="footer">
+    <div class="container">
+        <p>佳居房源</p>
+        <p>版权 201558234084 陈怡行 所有 </p>
+    </div>
+</footer>
+</body>
+</html>

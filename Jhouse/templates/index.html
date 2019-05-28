@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="../static/js/jquery-2.2.2.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.SingleNavPage.min.js"></script>
+    <script src="../static/js/wow.min.js"></script>
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script>
+        $(function(){
+            new WOW().init();
+        })
+    </script>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-b
+                ar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a  class="navbar-brand" href="#">佳居房源</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" id="daohang">
+                <li><a href="/">首页</a></li>
+	            <li><a href="/old_house/">二手房</a></li>
+	            <li><a href="/new_house/">新房</a></li>
+	            <li><a href="/rent_house/">租房</a></li>
+	            <li><a href="/village/">小区</a></li>
+                <li><a href="/person/">经纪人</a></li>
+	            <li><a href="/push/">发布房源</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../static/img/h2.jpg" style="height: 650px;width: 100%">
+        </div>
+        <div class="item">
+          <img src="../static/img/h1.jpg" style="height: 650px;width: 100%">
+        </div>
+        <div class="item">
+          <img src="../static/img/h3.jpg" style="height: 650px;width: 100%">
+        </div>
+          <div class="item">
+          <img src="../static/img/h4.jpg" style="height: 650px;width: 100%">
+        </div>
+      </div>
+    </div>
+
+<section id="list">
+    <div class="container bounceOutUp">
+        <div style="height: 25px">
+            <p style="float: left;font-size: 20px;font-weight: bold;">二手房
+                <span style="font-size: 10px">为您而选</span>
+            </p>
+            <p style="float: right;font-size: 15px;font-weight: bold;padding-top: 6px">
+                <a href="/old_house/" id="more" style="text-decoration: none;color: black">更多</a>
+            </p>
+        </div>
+        <div class="row" style="padding: 25px 0" id="oldhouse">
+
+        </div>
+    </div>
+    <div class="container bounceOutUp">
+        <div style="height: 25px">
+            <p style="float: left;font-size: 20px;font-weight: bold;">新房
+                <span style="font-size: 10px">新起航</span>
+            </p>
+            <p style="float: right;font-size: 15px;font-weight: bold;padding-top: 6px">
+                <a href="/new_house/" id="more" style="text-decoration: none;color: black">更多</a>
+            </p>
+        </div>
+        <div class="row" style="padding: 30px 0" id="newhouse">
+
+        </div>
+    </div>
+    <div class="container bounceOutUp">
+        <div style="height: 25px">
+            <p style="float: left;font-size: 20px;font-weight: bold;">租房
+                <span style="font-size: 10px">为你精选</span>
+            </p>
+            <p style="float: right;font-size: 15px;font-weight: bold;padding-top: 6px">
+                <a href="/rent_house/" id="more" style="text-decoration: none;color: black">更多</a>
+            </p>
+        </div>
+        <div class="row" style="padding: 30px 0" id="renthouse">
+
+        </div>
+    </div>
+    <div class="container bounceOutUp">
+        <div style="height: 25px">
+            <p style="float: left;font-size: 20px;font-weight: bold;">小区
+                <span style="font-size: 10px">为您推荐</span>
+            </p>
+            <p style="float: right;font-size: 15px;font-weight: bold;padding-top: 6px">
+                <a href="/village/" id="more" style="text-decoration: none;color: black">更多</a>
+            </p>
+        </div>
+        <div class="row" style="padding: 30px 0" id="village">
+
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 -->
+<section id="contact">
+    <div class="wrap wow flipInY">
+        <div class="container">
+            <div class="col-md-6">
+                <h2><span></span> 联系我们</h2>
+                <p style="padding-top: 25px;line-height: 25px;">
+                    佳居房源是一个集二手、新房、租房功能于一体，随时随地任性找房。
+                    IM匿名咨询让您放心，消息动态推送让您省心，服务承诺让您安心，
+                    数据百科锦囊让您感受贴心漫漫找房路，我们努力为您想更多。
+                </p>
+                <address style="padding-top: 40px;line-height: 40px;">
+                    <p>
+
+                        地址:重庆文理学院
+                    </p>
+                    <p>
+
+                        电话:123456789
+                    </p>
+                    <p>
+                     邮箱:123456789
+                    </p>
+                </address>
+            </div>
+            <div class="col-md-6" style="padding-top: 50px;padding-left: 36px;">
+                <form class="form-horizontal" action="/advice/" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <input name="email" type="email" class="form-control id="inputEmail3" placeholder="电子邮箱"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <input name="name" type="name" class="form-control" id="inputEma" placeholder="你的姓名">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 36px;">
+                        <div class="col-sm-10">
+                            <input name="title" type="title" class="form-control" id="inputPassword3" placeholder="标题">
+                        </div>
+                    </div>
+                    <div class="form-group" style="padding-left: 12px;margin-top: 36px;">
+                        <textarea name="advice" class="form-control" rows="3" placeholder="您的意见"></textarea>
+                    </div>
+                    <div class="form-group" style="padding-left: -20px;margin-top: 36px;">
+                        <div class=" col-sm-10">
+                            <button type="submit" class="btn btn-lg btn-success" style="width: 250px;"
+                            onclick="javascript:alert('提交建议成功');">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">个人资料修改</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="/update/" method="post">
+                    {% csrf_token %}
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <h3 style="text-align: center">{{ userinfo.uname }}</h3>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">电子邮箱</label>
+                        <div class="col-sm-10">
+                          <input name="email" type="email" class="form-control" id="inputEmail3" placeholder="Email"
+                          value="{{ userinfo.uemail }}">
+                        </div>
+                      </div>
+                        <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">原始密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword3" placeholder="original password"
+                          value="{{ userinfo.upwd }}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">修改密码</label>
+                        <div class="col-sm-10">
+                          <input name="upwd" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary" onclick="javascript:alert('修改成功');">提交</button>
+                        </div>
+                </form>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
